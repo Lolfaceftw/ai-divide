@@ -1,0 +1,75 @@
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--color-on-surface-variant);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.content-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.content-section h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.lab-pair {
+  margin-bottom: var(--spacing-xl);
+}
+
+.lab-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.lab-option-card {
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.lab-option-card:hover {
+  border-color: var(--color-primary);
+  background: rgba(192, 193, 255, 0.05);
+}
+
+.lab-option-card.selected {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px rgba(192, 193, 255, 0.2);
+}
+
+.feedback-text {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 500;
+}
+
+.quote-block {
+  border-left: 4px solid var(--color-primary);
+  padding-left: var(--spacing-md);
+  font-style: italic;
+  margin: var(--spacing-md) 0;
+  color: var(--color-on-surface);
+}

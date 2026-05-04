@@ -1,0 +1,53 @@
+.glow-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-button-primary {
+  background: linear-gradient(135deg, var(--color-primary-container), var(--color-secondary-container));
+  color: var(--color-on-primary-container);
+  box-shadow: 0 0 15px rgba(128, 131, 255, 0.4);
+}
+
+.glow-button-primary:hover {
+  box-shadow: 0 0 25px rgba(128, 131, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.glow-button-primary:active {
+  transform: translateY(0);
+}
+
+.glow-button-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-on-surface);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.glow-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.glow-button-ghost {
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.glow-button-ghost:hover {
+  background: rgba(192, 193, 255, 0.1);
+}
