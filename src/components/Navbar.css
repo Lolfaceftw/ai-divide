@@ -2,16 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-md) var(--spacing-lg) !important;
-  border-radius: var(--radius-lg) !important;
-  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-md) var(--spacing-xl);
+  margin: var(--spacing-lg) var(--spacing-xl);
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
   font-family: var(--font-headline);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.02em;
+  color: #fff;
 }
 
 .navbar-links {
@@ -22,18 +27,81 @@
 .nav-link {
   color: var(--color-on-surface-variant);
   font-family: var(--font-body);
+  font-size: 14px;
   font-weight: 500;
-  padding: 8px 16px;
-  border-radius: var(--radius-md);
-  transition: all 0.2s ease;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .nav-link:hover {
-  color: var(--color-on-surface);
-  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
 }
 
 .nav-link.active {
+  color: #fff;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.icon-btn:hover {
+  color: #fff;
+}
+
+.get-access-btn {
+  background: rgba(192, 193, 255, 0.05);
+  border: 1px solid rgba(192, 193, 255, 0.2);
   color: var(--color-primary);
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+}
+
+.get-access-btn:hover {
   background: rgba(192, 193, 255, 0.1);
+  border-color: rgba(192, 193, 255, 0.4);
+  box-shadow: 0 0 15px rgba(192, 193, 255, 0.15);
 }

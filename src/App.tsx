@@ -1,26 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navbar } from './components/Navbar';
-import { Home } from './pages/Home';
-import { DigitalDivide } from './pages/DigitalDivide';
-import { Censorship } from './pages/Censorship';
-import { InteractiveLab } from './pages/InteractiveLab';
+import { ParticleBackground } from './components/ParticleBackground';
+import { HeroSection } from './sections/HeroSection';
+import { LabSection } from './sections/LabSection';
+import { DigitalDivideSection } from './sections/DigitalDivideSection';
+import { CensorshipSection } from './sections/CensorshipSection';
+import './App.css';
 
 function App() {
   return (
-    <Router basename="/ai-divide">
-      <div className="app-container">
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/digital-divide" element={<DigitalDivide />} />
-            <Route path="/censorship" element={<Censorship />} />
-            <Route path="/lab" element={<InteractiveLab />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <div className="app-container">
+      <ParticleBackground />
+      <div className="bg-glow bg-glow-primary"></div>
+      <div className="bg-glow bg-glow-secondary"></div>
+      <div className="bg-grid"></div>
+      <main>
+        <HeroSection />
+        <LabSection />
+        <DigitalDivideSection />
+        <CensorshipSection />
+      </main>
+    </div>
   );
 }
 

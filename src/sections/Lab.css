@@ -1,0 +1,85 @@
+.lab-section .section-heading {
+  text-align: center;
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: var(--spacing-md);
+}
+
+.lab-section .section-intro {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto var(--spacing-2xl);
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.lab-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.lab-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.lab-option-card {
+  cursor: pointer;
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-on-surface-variant);
+}
+
+.lab-option-card:hover {
+  border-color: var(--color-primary);
+  background: rgba(165, 180, 252, 0.05);
+  transform: translateY(-2px);
+}
+
+.lab-option-card.selected {
+  transform: translateY(-2px);
+}
+
+.lab-option-card.selected.correct {
+  border-color: var(--color-success);
+  box-shadow: 0 0 20px rgba(134, 239, 172, 0.15);
+  background: rgba(134, 239, 172, 0.05);
+}
+
+.lab-option-card.selected.wrong {
+  border-color: var(--color-error);
+  box-shadow: 0 0 20px rgba(252, 165, 165, 0.15);
+  background: rgba(252, 165, 165, 0.05);
+}
+
+.feedback-text {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.feedback-text.correct {
+  background: rgba(134, 239, 172, 0.08);
+  color: var(--color-success);
+  border: 1px solid rgba(134, 239, 172, 0.15);
+}
+
+.feedback-text.wrong {
+  background: rgba(252, 165, 165, 0.08);
+  color: var(--color-error);
+  border: 1px solid rgba(252, 165, 165, 0.15);
+}
+
+@media (max-width: 768px) {
+  .lab-options-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,52 @@
+.hover-image-trigger {
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-image-trigger:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Full-screen overlay */
+.hover-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 9, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 40px;
+}
+
+.hover-overlay-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+
+.hover-overlay-hint {
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 500;
+}
+
+/* Mobile: prevent context menu on long-press */
+.hover-image-trigger {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}

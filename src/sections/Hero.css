@@ -1,0 +1,86 @@
+.hero-section-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.hero-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(165, 180, 252, 0.08);
+  border: 1px solid rgba(165, 180, 252, 0.2);
+  color: var(--color-primary);
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--spacing-xl);
+  font-family: var(--font-body);
+}
+
+.hero-title {
+  font-size: clamp(44px, 7vw, 80px);
+  line-height: 1.05;
+  margin-bottom: var(--spacing-lg);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.hero-title-white {
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--color-on-surface-variant);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.hero-cta {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.hero-scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.4;
+}
+
+.scroll-line {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--color-primary));
+  animation: float 2s ease-in-out infinite;
+}
+
+.scroll-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  color: var(--color-on-surface-variant);
+}
+
+@media (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 16px;
+  }
+}
